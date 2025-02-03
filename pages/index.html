@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaTeTi</title>
     <style>
-        body {
+        /*body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-        }
+        }*/
         .board {
             display: grid;
             grid-template-columns: repeat(3, 100px);
             grid-template-rows: repeat(3, 100px);
             gap: 5px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .cell {
             width: 100px;
@@ -31,8 +34,11 @@
     </style>
 </head>
 <body>
+    <header align="center">
+        <h1>CIRCLE IS RED - X IS BLUE. CIRCLE STARTS</h1>
+    </header>
     <div class="board" id="board">
-        <div class="cell" data-cell></div>
+        <div class="cell" id="1" data-cell onclick="pintarCelda(color, 1)"></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -44,7 +50,8 @@
     </div>
 
     <script>
-        const X_CLASS = 'x';
+        color = "#FF0035";
+        /*const X_CLASS = 'x';
         const CIRCLE_CLASS = 'circle';
         const WINNING_COMBINATIONS = [
             [0, 1, 2],
@@ -108,7 +115,8 @@
             return [...cellElements].every(cell => {
                 return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS);
             });
-        }
+        }*/
     </script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
