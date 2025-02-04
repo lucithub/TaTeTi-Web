@@ -38,19 +38,20 @@
         <h1>CIRCLE IS RED - X IS BLUE. CIRCLE STARTS</h1>
     </header>
     <div class="board" id="board">
-        <div class="cell" id="1" data-cell onclick="pintarCelda(color, 1)"></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
+        <div class="cell" id="1" data-cell onclick="pintarCelda(turn, 1)"></div>
+        <div class="cell" id="2" data-cell onclick="pintarCelda(turn, 2)"></div>
+        <div class="cell" id="3" data-cell onclick="pintarCelda(turn, 3)"></div>
+        <div class="cell" id="4" data-cell onclick="pintarCelda(turn, 4)"></div>
+        <div class="cell" id="5" data-cell onclick="pintarCelda(turn, 5)"></div>
+        <div class="cell" id="6" data-cell onclick="pintarCelda(turn, 6)"></div>
+        <div class="cell" id="7" data-cell onclick="pintarCelda(turn, 7)"></div>
+        <div class="cell" id="8" data-cell onclick="pintarCelda(turn, 8)"></div>
+        <div class="cell" id="9" data-cell onclick="pintarCelda(turn, 9)"></div>
     </div>
 
     <script>
-        color = "#FF0035";
+        let turn = 0;
+        colores = ["#FF0035", "#175F6C"];
         /*const X_CLASS = 'x';
         const CIRCLE_CLASS = 'circle';
         const WINNING_COMBINATIONS = [
