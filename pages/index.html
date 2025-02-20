@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaTeTi</title>
     <style>
-        /*body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }*/
         .board {
             display: grid;
             grid-template-columns: repeat(3, 100px);
@@ -38,75 +31,16 @@
         <h1>CIRCLE IS RED - X IS BLUE. CIRCLE STARTS</h1>
     </header>
     <div class="board" id="board">
-        <div class="cell" id="1" data-cell onclick="turn = pintarCelda(turn, 1)"></div>
-        <div class="cell" id="2" data-cell onclick="turn = pintarCelda(turn, 2)"></div>
-        <div class="cell" id="3" data-cell onclick="turn = pintarCelda(turn, 3)"></div>
-        <div class="cell" id="4" data-cell onclick="turn = pintarCelda(turn, 4)"></div>
-        <div class="cell" id="5" data-cell onclick="turn = pintarCelda(turn, 5)"></div>
-        <div class="cell" id="6" data-cell onclick="turn = pintarCelda(turn, 6)"></div>
-        <div class="cell" id="7" data-cell onclick="turn = pintarCelda(turn, 7)"></div>
-        <div class="cell" id="8" data-cell onclick="turn = pintarCelda(turn, 8)"></div>
-        <div class="cell" id="9" data-cell onclick="turn = pintarCelda(turn, 9)"></div>
+        <div class="cell" id="1" data-cell onclick="pintarCelda(1)"></div>
+        <div class="cell" id="2" data-cell onclick="pintarCelda(2)"></div>
+        <div class="cell" id="3" data-cell onclick="pintarCelda(3)"></div>
+        <div class="cell" id="4" data-cell onclick="pintarCelda(4)"></div>
+        <div class="cell" id="5" data-cell onclick="pintarCelda(5)"></div>
+        <div class="cell" id="6" data-cell onclick="pintarCelda(6)"></div>
+        <div class="cell" id="7" data-cell onclick="pintarCelda(7)"></div>
+        <div class="cell" id="8" data-cell onclick="pintarCelda(8)"></div>
+        <div class="cell" id="9" data-cell onclick="pintarCelda(9)"></div>
     </div>
-
-    <script>
-        let turn;
-        /*const X_CLASS = 'x';
-        const CIRCLE_CLASS = 'circle';*/
-        /*
-        const cellElements = document.querySelectorAll('[data-cell]');
-        const board = document.getElementById('board');
-        let circleTurn;
-
-        startGame();
-
-        function startGame() {
-            circleTurn = false;
-            cellElements.forEach(cell => {
-                cell.classList.remove(X_CLASS);
-                cell.classList.remove(CIRCLE_CLASS);
-                cell.removeEventListener('click', handleClick);
-                cell.addEventListener('click', handleClick, { once: true });
-            });
-        }
-
-        function handleClick(e) {
-            const cell = e.target;
-            const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
-            placeMark(cell, currentClass);
-            if (checkWin(currentClass)) {
-                setTimeout(() => alert(`${currentClass === X_CLASS ? "X" : "O"} gana!`), 10);
-                startGame();
-            } else if (isDraw()) {
-                setTimeout(() => alert("Empate!"), 10);
-                startGame();
-            } else {
-                swapTurns();
-            }
-        }
-
-        function placeMark(cell, currentClass) {
-            cell.classList.add(currentClass);
-        }
-
-        function swapTurns() {
-            circleTurn = !circleTurn;
-        }
-
-        function checkWin(currentClass) {
-            return WINNING_COMBINATIONS.some(combination => {
-                return combination.every(index => {
-                    return cellElements[index].classList.contains(currentClass);
-                });
-            });
-        }
-
-        function isDraw() {
-            return [...cellElements].every(cell => {
-                return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS);
-            });
-        }*/
-    </script>
     <script src="/js/script.js"></script>
 </body>
 </html>
